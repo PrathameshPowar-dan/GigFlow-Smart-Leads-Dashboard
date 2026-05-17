@@ -18,7 +18,7 @@ export const validate = (schema: ZodObject<ZodRawShape>) =>
                     message: 'Validation failed',
                     errors: error.issues.map(e => ({
                         field: e.path.join('.'),
-                        message: e.message
+                        message: e.message.replace(/"/g, '').replaceAll("|",",")
                     }))
                 });
                 return;

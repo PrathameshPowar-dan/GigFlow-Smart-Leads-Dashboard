@@ -1,6 +1,9 @@
 import type { Request, Response, NextFunction } from 'express';
 import { User } from '../models/User.models.js';
 
+// Register a new user
+// POST /api/users/register
+// @access  Public
 export const register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const { name, email, password, role } = req.body;
@@ -28,6 +31,9 @@ export const register = async (req: Request, res: Response, next: NextFunction):
     }
 };
 
+// Login user
+// POST /api/users/login
+// @access  Public
 export const login = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
         const { email, password } = req.body;

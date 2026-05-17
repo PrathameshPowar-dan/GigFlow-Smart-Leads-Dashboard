@@ -4,6 +4,7 @@ import cors from 'cors';
 import { connectDB } from './config/db.js';
 import { errorHandler } from './middlewares/error.middleware.js';
 import UserRoutes from './routes/user.routes.js';
+import LeadRoutes from './routes/lead.routes.js';
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/users', UserRoutes);
+app.use('/api/leads', LeadRoutes);
 
 app.use(errorHandler);
 
