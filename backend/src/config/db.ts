@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+import { setServers } from "node:dns/promises";
+setServers(["1.1.1.1", "8.8.8.8"]);
 
 export const connectDB = async (): Promise<void> => {
     try {
@@ -10,6 +12,7 @@ export const connectDB = async (): Promise<void> => {
         const conn = await mongoose.connect(mongoURI);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
+        console.log(error);
         console.error(`Database connection error: ${(error as Error).message}`);
         process.exit(1);
     }
