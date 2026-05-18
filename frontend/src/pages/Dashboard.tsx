@@ -102,7 +102,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
       {/* Navbar */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <div className="flex justify-center items-center mb-8 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">GigFlow Leads</h1>
           <p className="text-gray-500 text-sm mt-1">Logged in as {user?.name} <span className="px-2 py-1 bg-gray-100 rounded-md text-xs font-semibold ml-2">{user?.role}</span></p>
@@ -160,9 +160,9 @@ export default function Dashboard() {
       {/* Table Data */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse min-w-[800px]">
+          <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-gray-50 border-b border-gray-200">
+              <tr className="bg-gray-50 border border-gray-200">
                 <th className="px-6 py-4 font-semibold text-gray-700 text-sm">Name</th>
                 <th className="px-6 py-4 font-semibold text-gray-700 text-sm">Email</th>
                 <th className="px-6 py-4 font-semibold text-gray-700 text-sm">Status</th>
