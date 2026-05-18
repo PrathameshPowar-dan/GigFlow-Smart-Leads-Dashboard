@@ -34,7 +34,14 @@ This project was created as a submission for a Full Stack Internship assignment 
 - MongoDB Atlas cluster or local MongoDB instance
 - Docker Desktop (optional, but recommended)
 
-### 1. Backend Environment
+### 1. Clone Repo
+Clone the repo in your local device:
+
+```
+git clone https://github.com/PrathameshPowar-dan/GigFlow-Smart-Leads-Dashboard.git
+```
+
+### 2. Backend Environment
 Create a `.env` file inside `backend/` with:
 
 ```env
@@ -43,14 +50,14 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 ```
 
-### 2. Frontend Environment
+### 3. Frontend Environment
 Create a `.env` file inside `frontend/` with:
 
 ```env
 VITE_API_URL=http://localhost:8000/api
 ```
 
-### 3. Running with Docker (Recommended)
+### 4. Running with Docker (Recommended)
 From the project root directory:
 
 ```bash
@@ -60,7 +67,7 @@ docker-compose up --build -d
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:8000/api
 
-### 4. Running Locally Without Docker
+### 5. Running Locally Without Docker
 
 #### Backend
 ```bash
