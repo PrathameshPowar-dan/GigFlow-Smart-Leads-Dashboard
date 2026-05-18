@@ -45,7 +45,7 @@ export default function Login() {
                     </div>
                 )}
 
-                // Form fields for login/register
+                {/* Form fields for login/register */}
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {!isLogin && (
                         <div>
