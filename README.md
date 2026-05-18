@@ -175,5 +175,3 @@ Base URL: `/api/leads` (protected)
   - `src/utils/` — Axios API client
 
 ---
-
-If you want, I can also add the missing deployment links and a `frontend` README with usage details.
