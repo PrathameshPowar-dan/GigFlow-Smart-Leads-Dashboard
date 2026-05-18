@@ -15,6 +15,9 @@ app.use(express.json());
 
 app.use('/api/users', UserRoutes);
 app.use('/api/leads', LeadRoutes);
+app.get('/api/health', (req, res) => {
+    res.json({ success: true, message: 'API is healthy' });
+});
 
 app.use(errorHandler);
 
